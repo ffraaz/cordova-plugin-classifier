@@ -11,7 +11,9 @@
 
 # Installation
 
-`cordova plugin add cordova-plugin-classifier`
+``` 
+cordova plugin add cordova-plugin-classifier
+```
 
 # Usage
 
