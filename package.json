@@ -1,0 +1,33 @@
+{
+  "name": "cordova-plugin-classifier",
+  "version": "0.2.11",
+  "description": "Classify using LIBSVM",
+  "cordova": {
+    "id": "Classifier",
+    "platforms": [
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ffraaz/cordova-plugin-classifier.git"
+  },
+  "keywords": [
+    "machine learning",
+    "classifier",
+    "svm",
+    "machine",
+    "learning",
+    "support",
+    "vector",
+    "LIBSVM",
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "author": "Frederik Fraaz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ffraaz/cordova-plugin-classifier/issues"
+  },
+  "homepage": "https://github.com/ffraaz/cordova-plugin-classifier#readme"
+}

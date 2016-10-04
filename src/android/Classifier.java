@@ -18,9 +18,8 @@ import android.os.Environment;
 public class Classifier extends CordovaPlugin {
 
 	public static final String TAG = "Classifier";
-	
-	svm_predict activities, directions;
-	String predictClass = "";
+	svm_predict predictor;
+	String predictedClass = "";
 	/**
 	* Constructor.
 	*/
@@ -37,33 +36,23 @@ public class Classifier extends CordovaPlugin {
 
 	public void initialize(CordovaInterface cordova, CordovaWebView webView) {
 		super.initialize(cordova, webView);
-
-		activities = new svm_predict("activities.train.model");
-		directions = new svm_predict("directions.train.model");
+		predictor = new svm_predict("svm.model");
 	}
 	 
 	public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
 
-     	this.classify(args.getString(0), args.getString(1), callbackContext);
+     	this.classify(args.getString(0), callbackContext);
 
 		return true;
 	}
 
-	private void classify(String featureString, String mode, CallbackContext callbackContext) {
+	private void classify(String featureString, CallbackContext callbackContext) {
 
 		//making the prediction and sending the result back to Javascript
         String instance = featureString + "\n";
 
+		predictedClass = "" + predictor.predict(instance);
 
-        //decide which model to use (activity classifier vs direction classifier)
-        if(mode.equals("activity")){
-		   predictClass = "" + activities.predict(instance);
-		}else if(mode.equals("direction")){
-		   predictClass = "" + directions.predict(instance);
-		}else {
-		   Log.v(TAG,mode + " #svm_predict \n");
-		}
-		
-        callbackContext.success(predictClass);
+        callbackContext.success(predictedClass);
 	}
 }
