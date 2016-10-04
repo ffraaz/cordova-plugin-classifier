@@ -17,9 +17,11 @@ cordova plugin add cordova-plugin-classifier
 
 # Usage
 
-Copy the model file that you trained on your computer to the SD Card of the phone and name the model `svm.model`.
+1. Copy the model file that you trained on your computer to the SD Card of the phone and name the model `svm.model`
 
-Then you can use the plugin in your Javascript code like this:
+2. Make sure that your app has permissions to access the SD Card
+
+Then you can use the plugin in your Javascript code like this
 
 ```javascript
 document.addEventListener("deviceready", function () {
