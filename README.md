@@ -9,11 +9,11 @@
 ## LIBSVM
 > LIBSVM is an integrated software for support vector classification, (C-SVC, nu-SVC), regression (epsilon-SVR, nu-SVR) and distribution estimation (one-class SVM). It supports multi-class classification. [[official page](https://www.csie.ntu.edu.tw/~cjlin/libsvm/)]
 
-## Installation
+# Installation
 
 `cordova plugin add cordova-plugin-classifier`
 
-## Usage
+# Usage
 
 Copy the model file that you trained on your computer to the SD Card of the phone and name the model `svm.model`.
 
@@ -53,5 +53,5 @@ function formatLIBSVM(features) {
 }
 ```
 
-## License
+# License
 [MIT](https://opensource.org/licenses/MIT)
