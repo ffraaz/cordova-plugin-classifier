@@ -58,4 +58,4 @@ function formatLIBSVM(features) {
 ```
 
 # License
-[MIT](https://opensource.org/licenses/MIT)
+[MIT](https://github.com/ffraaz/cordova-plugin-classifier/blob/master/LICENSE)
