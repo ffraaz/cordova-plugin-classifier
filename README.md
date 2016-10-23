@@ -17,9 +17,11 @@ cordova plugin add cordova-plugin-classifier
 
 # Usage
 
-1. Copy the model file that you trained on your computer to the SD Card of the phone and name the model `svm.model`
+1. Train the model on your computer. You can find more information about the process [here](https://www.csie.ntu.edu.tw/~cjlin/libsvm/).
 
-2. Make sure that your app has permissions to access the SD Card
+2. Rename the model file to `svm.model` and copy it to the SD Card of the phone 
+
+3. Make sure that your app has permissions to access the SD Card
 
 Then you can use the plugin in your Javascript code like this
 
